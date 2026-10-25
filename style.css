@@ -1,0 +1,261 @@
+/* --- 1. إعدادات عامة وسلاسة الحركة --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* التمرير السلس بين الأقسام */
+}
+
+body {
+    background-color: #0b132b; /* لون الخلفية الداكن الخاص بك */
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* --- 2. تنسيق القائمة العلوية Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1c2541;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00a8ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00a8ff; /* تغيير اللون عند مرور الماوس */
+}
+
+/* --- 3. تنسيق قسم الترحيب Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h3 {
+    color: #cccccc;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #00a8ff;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #dddddd;
+    font-size: 1.1rem;
+}
+
+/* --- 4. تنسيق الأزرار --- */
+.btn {
+    display: inline-block;
+    background-color: #00a8ff;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0086cc;
+    transform: translateY(-3px); /* حركة رفع بسيطة للزر */
+    box-shadow: 0 5px 15px rgba(0, 168, 255, 0.3);
+}
+
+/* --- 5. تنسيق الأقسام العامة (Cards) --- */
+.card-section {
+    background-color: #1c2541;
+    border: 1px solid #2a385b;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-section h2 {
+    color: #00a8ff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.card-section ul {
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+.card-section li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* --- 6. التجاوب مع شاشات الهواتف Responsive --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+/* --- 1. إبعاد الأقسام عن بعضها وإعطاؤها شكل بطاقات مرتبة --- */
+section, div.section {
+    background-color: #121a2d;      /* لون بطاقة أخف قليلاً من الخلفية */
+    margin: 35px auto;              /* مسافة خارجية كبيرة لإبعاد الأقسام عن بعضها */
+    padding: 30px;                  /* مسافة داخلية لتنفس النصوص */
+    border-radius: 12px;            /* حواف دائرية ناعمة */
+    max-width: 800px;               /* تحديد عرض أقصى لعدم تمدد النصوص بشكل مزعج */
+    border: 1px solid #1e2d4a;      /* إطار ناعم يحدد كل قسم */
+}
+
+/* --- 2. إبعاد العناوين عن النصوص التي تحتها --- */
+h2, h3 {
+    margin-bottom: 15px !important;
+}
+
+p, ul {
+    margin-bottom: 15px;
+    line-height: 1.8;               /* تباعد الأسطر لتسهيل القراءة */
+}
+
+/* --- 3. تنسيق قائمة المهارات (List) --- */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #00a8ff;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* تغيير لون جميع الروابط للون الأزرق السماوي */
+a {
+    color: #00a8ff !important;     /* نفس لون Contact Me */
+    text-decoration: none;          /* لإزالة الخط السفلِي */
+    font-weight: bold;
+}
+
+/* عند وضع الماوس فوق الرابط يتحول للأبيض */
+a:hover {
+    color: #ffffff !important;
+}
+.contact a.btn {
+    color: white;
+}
+.btn {
+    color: white !important;
+}
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.hobby {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.hobby h3 {
+    color: #00a8ff;
+}
+nav a {
+    margin-right: 20px;
+}
+.projects {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    color: #00a8ff;
+}
+@media (max-width: 600px) {
+    section, div.section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile {
+        width: 120px;
+        height: 120px;
+    }
+}
